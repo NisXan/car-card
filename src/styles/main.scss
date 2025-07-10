@@ -43,8 +43,14 @@ body {
     font-weight: 400;
     background-color: variables.$background-primary;
     color: variables.$text-primary;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     min-height: 100vh;
 }
@@ -74,6 +80,8 @@ main {
     color: variables.$background-secondary;
     cursor: pointer;
     outline: none;
+    -webkit-transition: .3s ease all;
+    -o-transition: .3s ease all;
     transition: .3s ease all;
 
     &:hover,
@@ -85,13 +93,19 @@ main {
 .card {
     width: 100%;
     max-width: 475px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
     &:hover,
     &:focus {
+        -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
         box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
 
         .card-header__name {
@@ -108,8 +122,14 @@ main {
         background: variables.$background-secondary;
     }
     &-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: start;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         margin-bottom: 12px;
         gap: 12px;
@@ -120,6 +140,7 @@ main {
             white-space: nowrap;
         }
         &__year {
+            font-weight: 500;
             margin-left: 6px;
             color: variables.$text-secondary;
         }
@@ -136,7 +157,11 @@ main {
     &-info {
         margin: 0;
         padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         &__item {
             display: block;
@@ -167,19 +192,29 @@ main {
     padding: 16px;
     position: fixed;
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: calc(100% - 40px);
     max-width: 475px;
     max-height: 90vh;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background: variables.$background-secondary;
+    -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
     overflow: auto;
     z-index: 1001;
     &.open {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -219,6 +254,8 @@ main {
             width: 24px;
             height: 24px;
             stroke: variables.$accent-tertiary;
+            -webkit-transition: .3s ease all;
+            -o-transition: .3s ease all;
             transition: .3s ease all;
         }
     }
@@ -251,12 +288,17 @@ main {
     }
 
     .card {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
         max-width: 656px;
 
         &-img {
             width: 165px;
+            -o-object-fit: cover;
             object-fit: cover;
+            -ms-flex-negative: 0;
             flex-shrink: 0;
         }
 
@@ -314,4 +356,3 @@ main {
         }
     }
 }
-
