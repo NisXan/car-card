@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD Тех.задание для верстальщика - Ашенбреннер Никита</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+    <main>
+        <div class="card">
+            <img class="card-img" src="images/product_image.png" alt="Volvo XC40">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="card-header__name">
+                        Volvo XC40<span class="card-header__year">2024</span>
+                    </div>
+                    <div class="card-header__sale">Скидка 200&nbsp;000&nbsp;₽</div>
+                </div>
+
+                <ul class="card-info">
+                    <li class="card-info__item">
+                        <div class="card-info__caption">Бензин, 180&nbsp;л.с.</div>
+                        <div class="card-info__value">2.0&nbsp;л</div>
+                    </li>
+                    <li class="card-info__item">
+                        <div class="card-info__caption">Передний</div>
+                        <div class="card-info__value">4х2</div>
+                    </li>
+                    <li class="card-info__item">
+                        <div class="card-info__caption">6&nbsp;ступений</div>
+                        <div class="card-info__value">АКПП</div>
+                    </li>
+                    <li class="card-info__item">
+                        <div class="card-info__caption">Стоимость</div>
+                        <div class="card-info__price">5 131 000 ₽</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div class="modal-bg js-close"></div>
+    <div class="modal" id="cardModal">
+        <button class="modal-close js-close">
+            <svg class="modal-close__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 6L6 24M6 6L24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <img class="modal-logo" src="images/logo.svg" alt="Спасибо">
+
+        <h2 class="modal-title">Ваша заявка отправлена!</h2>
+        <p class="modal-text">Спасибо за обращение! Мы свяжемся с вами в ближайшее время</p>
+
+        <button class="btn js-close">Вернуться в каталог</button>
+    </div>
+</body>
+</html>
